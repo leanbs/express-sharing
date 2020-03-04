@@ -4,6 +4,9 @@ const user = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       unique: true,
     },
+    password: {
+      type: DataTypes.STRING,
+    }
   });
   User.associate = models => {
     User.hasMany(models.Message, { onDelete: 'CASCADE' });
